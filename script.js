@@ -89,7 +89,7 @@ function load(date, month, year) {
 function jumpMonth() {
   currentMonth = parseInt(selectMonth.value);
   currentYear = parseInt(selectYear.value);
-
+  color = color.map((color) => 0);
   load(today, currentMonth, currentYear);
 }
 
