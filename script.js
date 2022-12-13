@@ -1,6 +1,6 @@
 let submitBtn = false;
 
-const color = [
+let color = [
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0,
 ];
@@ -87,9 +87,13 @@ function load(date, month, year) {
 }
 
 function jumpMonth() {
+  submitBtn = false;
   currentMonth = parseInt(selectMonth.value);
   currentYear = parseInt(selectYear.value);
-  color = color.map((color) => 0);
+  color = color.map((color) => {
+    return 0;
+  });
+  console.log(color);
   load(today, currentMonth, currentYear);
 }
 
